@@ -1,0 +1,17 @@
+{
+  "name": "job-radar-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local-first US job search with Ollama, employer-link verification, and XLSX export",
+  "type": "module",
+  "license": "UNLICENSED",
+  "engines": { "node": ">=22.13.0" },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "start": "node local-server.mjs",
+    "test": "node --test official-links.test.mjs tests/*.test.mjs",
+    "check": "node --check local-server.mjs && node --check official-links.mjs && node --check public/local-app.js"
+  },
+  "dependencies": { "exceljs": "4.4.0" },
+  "overrides": { "uuid": "11.1.1" }
+}
